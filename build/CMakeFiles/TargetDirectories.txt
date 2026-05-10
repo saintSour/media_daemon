@@ -1,0 +1,3 @@
+/home/stsour/Рабочий стол/media_daemon/build/CMakeFiles/media_scanner.dir
+/home/stsour/Рабочий стол/media_daemon/build/CMakeFiles/edit_cache.dir
+/home/stsour/Рабочий стол/media_daemon/build/CMakeFiles/rebuild_cache.dir

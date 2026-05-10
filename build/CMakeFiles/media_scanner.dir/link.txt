@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/media_scanner.dir/link.d CMakeFiles/media_scanner.dir/src/main.cpp.o -o media_scanner
