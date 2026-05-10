@@ -23,6 +23,51 @@ bool has_extension(const fs::path& p,
     return extensions.count(ext) > 0;
 }
 
+std::string escape_json(const std::string& s)
+{
+    std::string out;
+    out.reserve(s.size() + 10);
+    for (char c : s)
+    {
+        switch (c)
+        {
+        case '\"':
+            out += "\\\"";
+            break;
+        case '\\':
+            out += "\\\\";
+            break;
+        case '\b':
+            out += "\\b";
+            break;
+        case '\f':
+            out += "\\f";
+            break;
+        case '\n':
+            out += "\\n";
+            break;
+        case '\r':
+            out += "\\r";
+            break;
+        case '\t':
+            out += "\\t";
+            break;
+        default:
+            if (static_cast<unsigned char>(c) < 0x20) 
+            {
+                char buf[7];
+                std::snprintf(buf, sizeof(buf), "\\u%04x", c);
+                out += buf;
+            }
+            else 
+            {
+                out += c;
+            }
+            break;
+        }
+    }
+}
+
 void scan_media(const fs::path& home, const fs::path& out_file)
 {
     std::unordered_set<std::string> video_exts = {".mp4", ".avi", ".mov", ".mpg", ".mpeg", ".mkv"};
