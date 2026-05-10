@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
-project(media_scanner LANGUAGES CXX)
+project(media_daemon LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(media_scanner
+add_executable(media_daemon
     src/main.cpp
 )

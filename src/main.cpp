@@ -66,6 +66,8 @@ std::string escape_json(const std::string& s)
             break;
         }
     }
+
+    return out;
 }
 
 void scan_media(const fs::path& home, const fs::path& out_file)
@@ -140,7 +142,7 @@ void scan_media(const fs::path& home, const fs::path& out_file)
         {
             output << ",";
         }
-        
+
         output << "\n";
     };
 
@@ -189,7 +191,7 @@ int main(int argc, char** argv)
     {
         try
         {
-            scan_media(home, output_file)
+            scan_media(home, output_file);
         }
         catch(const std::exception& e)
         {
