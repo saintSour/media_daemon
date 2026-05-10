@@ -13,8 +13,8 @@
   "images": [ "path/to/img1.jpeg", "path/to/img2.png" ]
 }
 ```
-
-```Сборка (CMake)
+## Сборка (CMake)
+```
 mkdir build
 cd build
 cmake ..
@@ -23,8 +23,8 @@ cmake --build .
 #или использовать
 ./autobuild.sh
 ```
-
-```Запуск
+## Запуск
+```
 ./media_daemon		#интервал 60 секунд
 ./media_daemon 30	#интервал 30 секунд
 ```
